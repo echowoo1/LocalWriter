@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="查找"
+        app:showAsAction="ifRoom" />
+    
+    <item
+        android:id="@+id/action_export_txt"
+        android:title="导出为TXT"
+        app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_export_pdf"
+        android:title="导出为PDF"
+        app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_dark_mode"
+        android:title="深色模式"
+        app:showAsAction="never"
+        android:checkable="true" />
+    
+    <item
+        android:id="@+id/action_document_list"
+        android:title="文档列表"
+        app:showAsAction="never" />
+</menu>

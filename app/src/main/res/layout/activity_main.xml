@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_500"
+        android:elevation="4dp"
+        app:title="本地写作"
+        app:titleTextColor="@android:color/white" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="top|start"
+            android:inputType="textMultiLine|textCapSentences"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </ScrollView>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="3">
+        
+        <TextView
+            android:id="@+id/tvCharCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="字符: 0"
+            android:textSize="12sp" />
+        
+        <TextView
+            android:id="@+id/tvWordCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="字数: 0"
+            android:textSize="12sp" />
+        
+        <TextView
+            android:id="@+id/tvLineCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="行数: 0"
+            android:textSize="12sp" />
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        
+        <TextView
+            android:id="@+id/tvFontSizeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="字体大小: 16sp"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+        
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderFontSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:value="16"
+            android:valueFrom="10"
+            android:valueTo="30"
+            android:stepSize="1"
+            android:layout_marginBottom="16dp" />
+        
+        <TextView
+            android:id="@+id/tvLineSpacingValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="行间距: 1.2x"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+        
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderLineSpacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:value="1.2"
+            android:valueFrom="1.0"
+            android:valueTo="2.5"
+            android:stepSize="0.1" />
+    </LinearLayout>
+</LinearLayout>
